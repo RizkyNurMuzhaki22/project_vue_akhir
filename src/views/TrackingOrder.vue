@@ -66,8 +66,8 @@
         <div class="flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 dark:bg-gray-800 space-y-6">
           <h3 class="text-xl dark:text-white font-semibold leading-5 text-gray-800">Summary</h3>
           <div class="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b pb-4">
-            <div class="flex justify-between w-full" v-for="(order) in getOrder.orders[0].products.data">
-              <p class="text-base dark:text-white leading-4 text-gray-800">Qty :</p>
+            <div class="flex justify-between w-full">
+              <p class="text-base dark:text-white leading-4 text-gray-800" v-for="(order) in getOrder.orders[0].products.data">Qty :</p>
               <p class="text-base dark:text-gray-300 leading-4 text-gray-600">{{ order.quantity }}</p>
             </div>
             <div class="flex justify-between items-center w-full">
