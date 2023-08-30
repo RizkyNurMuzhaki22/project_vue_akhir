@@ -65,14 +65,14 @@
       <div class="flex justify-center flex-col md:flex-row flex-col items-stretch w-full space-y-4 md:space-y-0 md:space-x-6 xl:space-x-8">
         <div class="flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 dark:bg-gray-800 space-y-6">
           <h3 class="text-xl dark:text-white font-semibold leading-5 text-gray-800">Summary</h3>
-          <div class="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b pb-4">
-            <div class="flex justify-between w-full">
-              <p class="text-base dark:text-white leading-4 text-gray-800" v-for="(order) in getOrder.orders[0].products.data">Qty :</p>
-              <p class="text-base dark:text-gray-300 leading-4 text-gray-600">{{ order.quantity }}</p>
+          <div class="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b pb-4" >
+            <div class="flex justify-between w-full" >
+              <p class="text-base dark:text-white leading-4 text-gray-800" > Harga Barang :</p>
+              <p class="text-base dark:text-gray-300 leading-4 text-gray-600">Rp.{{ getOrder.orders[0].products.data[0].price }}</p>
             </div>
-            <div class="flex justify-between items-center w-full">
-              <p class="text-base dark:text-white leading-4 text-gray-800">Diskon<span class="bg-gray-200 p-1 text-xs font-medium dark:bg-white dark:text-gray-800 leading-3 text-gray-800">Promo</span></p>
-              <p class="text-base dark:text-gray-300 leading-4 text-gray-600">Rp.0</p>
+            <div class="flex justify-between items-center w-full" v-for="(order) in getOrder.orders[0].products.data">
+              <p class="text-base dark:text-white leading-4 text-gray-800">QTY :<span class="bg-gray-200 p-1 text-xs font-medium dark:bg-white dark:text-gray-800 leading-3 text-gray-800"></span></p>
+              <p class="text-base dark:text-gray-300 leading-4 text-gray-600">{{ order.quantity }}</p>
             </div>
             <div class="flex justify-between items-center w-full">
               <p class="text-base dark:text-white leading-4 text-gray-800">Biaya Ongkir :</p>
@@ -81,7 +81,7 @@
           </div>
           <div class="flex justify-between items-center w-full">
             <p class="text-base dark:text-white font-semibold leading-4 text-gray-800">Total Keseluruhan :</p>
-            <p class="text-base dark:text-gray-300 font-semibold leading-4 text-gray-600">Rp. {{  getOrder.orders[0].grand_total }}</p>
+            <p class="text-base dark:text-gray-300 font-semibold leading-4 text-gray-600" v-if="getOrder.orders">Rp. {{  getOrder.orders[0].grand_total }}</p>
           </div>
         </div>
         <div class="flex flex-col justify-center px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 dark:bg-gray-800 space-y-6">
@@ -141,7 +141,6 @@
       </div>
     </div>
   </div>
-  {{ getCart }}
 </div>
 </template>
 <script>
