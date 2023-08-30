@@ -2,7 +2,7 @@
     <div>
 <nav class="bg-blue-800 border-gray-200 dark:bg-gray-900">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="https://flowbite.com/" class="flex items-center">
+  <a href="/products/" class="flex items-center">
       <img src="https://cdn-icons-png.flaticon.com/128/4050/4050101.png" class="h-8 mr-3" alt="Flowbite Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">𝓟𝓟𝓗𝓘_𝓒𝓸𝓵𝓵𝓮𝓬𝓽𝓲𝓸𝓷 ~</span>
   </a>
